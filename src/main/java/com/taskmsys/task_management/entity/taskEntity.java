@@ -30,6 +30,8 @@ public class taskEntity {
     @Column (name = "due_date")
     private LocalDateTime dueDate;
 
+    public taskEntity(){};
+
     public taskEntity(long id, String title, String description, String status, LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime dueDate) {
         this.id = id;
         this.title = title;
