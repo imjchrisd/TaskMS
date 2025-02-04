@@ -21,6 +21,9 @@ public class taskEntity {
     @Column (name = "status", nullable = false, length = 50)
     private String status;
 
+    @Column (name ="importance", nullable = false, length = 50)
+    private String importance;
+
     @Column (name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 
@@ -29,6 +32,8 @@ public class taskEntity {
 
     @Column (name = "due_date")
     private LocalDateTime dueDate;
+
+    public taskEntity(){};
 
     public taskEntity(long id, String title, String description, String status, LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime dueDate) {
         this.id = id;
@@ -70,6 +75,14 @@ public class taskEntity {
 
     public void setStatus(String status) {
         this.status = status;
+    }
+
+    public String getImportance() {
+        return importance;
+    }
+
+    public void setImportance(String importance) {
+        this.importance = importance;
     }
 
     public LocalDateTime getCreatedAt() {
